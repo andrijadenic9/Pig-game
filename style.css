@@ -16,7 +16,9 @@ body {
   font-weight: 400;
   height: 100vh;
   color: #333;
-  background-image: linear-gradient(to top left, #1a2a6c  0%, #b21f1f 50%, #fdbb2d 100%);
+  background-image: url(images/grad-dice.jpg);
+  background-size: cover;
+  background-position: center;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -28,7 +30,7 @@ main {
   width: 100rem;
   height: 60rem;
   background-color: rgba(255, 255, 255, 0.35);
-  backdrop-filter: blur(200px);
+  backdrop-filter: blur(5px);
   filter: blur();
   box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
   border-radius: 9px;
@@ -46,8 +48,30 @@ main {
 }
 
 input {
-  padding: 10px;
-  font-size: 17px;
+  padding: 12px;
+  font-size: 16px;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  border-bottom: 3px solid #333;
+  color: #333;
+}
+
+input:focus {
+  outline: none;
+}
+
+::placeholder {
+  color: #333;
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  color: #333;
+}
+
+::-ms-input-placeholder {
+  color: #333; 
 }
 
 /* ELEMENTS */
@@ -64,7 +88,7 @@ input {
 .score {
   font-size: 8rem;
   font-weight: 300;
-  color: #3F2758;
+  color: #333;
   margin-bottom: auto;
 }
 
@@ -77,13 +101,12 @@ input {
 .player--active .score {
   font-weight: 400;
 }
-
 .player--active .current {
   opacity: 1;
 }
 
 .current {
-  background-color: #3F2758;
+  background-color: #605ae2;
   opacity: 0.8;
   border-radius: 9px;
   color: #fff;
@@ -119,7 +142,7 @@ input {
   font-weight: 400;
   transition: all 0.2s;
 
-  background-color: white;
+  background-color: #fff;
   background-color: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(10px);
 
@@ -163,10 +186,9 @@ input {
 }
 
 .player--winner {
-  background-color: #2f2f2f;
+  background-color: #cf4c8ceb;
 }
 
 .player--winner .name {
   font-weight: 700;
-  color: #3F2758;
 }
